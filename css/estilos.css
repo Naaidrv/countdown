@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+
+/* ? ----- PORTADA ----- */
+.portada {
+        /* Imagen de fondo */
+    background-image: url('/img/wallpaper.png');
+    
+        /* Ajustes para que la imagen cubra todo el área */
+    background-size: cover;
+        
+        /* Centra la imagen de fondo */
+    background-position: center;
+        
+    /* La imagen no se repetirá */
+    background-repeat: no-repeat;
+        
+    /* Asegura que el div ocupe todo el alto de la ventana */
+    min-height: 100vh;
+    width: 100%;
+
+    /*background: rgb(221,4,89);
+    background: linear-gradient(90deg, rgba(221,4,89,1) 0%, rgba(235,88,149,1) 52%, rgba(253,153,167,1) 100%);*/
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .5s ease-out all;
+    transition: .5s ease-out all;
+}
+
+.portada.oculta {
+	transform: translateY(100%);
+}
+
+.portada .header {
+	margin-bottom: 100px;
+	letter-spacing: 3px;
+}
+
+.portada .header .logotipo {
+	font-size: 50px;
+    color: #fefefe;
+    text-shadow:
+      1px 0px 0 #aa2d3d,    /* Desplaza a la derecha */
+      -1px 0px 0 #aa2d3d,   /* Desplaza a la izquierda */
+      0 1px 0px #aa2d3d,    /* Desplaza abajo */
+      0 -1px 10px #aa2d3d;   /* Desplaza arriba */
+	margin-bottom: 20px;
+}
+
+.portada .header .mensaje {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+/* ? ----- MAIN ----- */
+main {
+	max-width: 1000px;
+	margin: auto;
+	width: 90%;
+	padding: 60px 0;
+	font-size: 18px;
+	line-height: 28px;
+	text-align: left;
+}
+
+/* ? ----- Cuenta Regresiva ----- */
+#cuenta {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 100px;
+	flex-wrap: wrap; 
+}
+
+.simply-section {
+	background: #fff;
+	width: 180px;
+	height: 180px;
+	margin: 0 20px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.simply-amount {
+	display: block;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+.simply-word {
+	font-weight: 300;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #cuenta {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .simply-section {
+        width: 100%; /* Hacer que cada recuadro ocupe el 100% del ancho */
+        margin: 20px; /* Espaciado vertical entre recuadros */
+        height: auto; /* Ajustar la altura automáticamente */
+    }
+
+    .simply-amount {
+        display: block;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .simply-word {
+        font-weight: 300;
+        font-size: 16px;
+    }
+    
+  }
