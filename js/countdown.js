@@ -1,9 +1,9 @@
 simplyCountdown('#cuenta', {
 	year: 2024, // año
 	month: 10, // mes (octubre)
-	day: 3, // día
+	day: 4, // día
 	hours: 0, // 12 AM (medianoche)
-	minutes: 1, // 0 minutos
+	minutes: 0, // 0 minutos
 	seconds: 0, // 0 segundos
 	words: { // Palabras para el conteo
         days: 'Día',

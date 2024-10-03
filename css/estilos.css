@@ -141,7 +141,7 @@ main {
     }
 
     main{
-        height: 150vh;
+        height: 200vh;
         color: #fff;
         background: rgb(253,153,167);
         background: linear-gradient(90deg, rgba(253,153,167,1) 35%, rgba(235,88,149,1) 100%);
