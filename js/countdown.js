@@ -1,30 +1,29 @@
 simplyCountdown('#cuenta', {
-	year: 2024, // required
-	month: 10, // required
-	day: 5, // required
-	hours: 22, // Default is 0 [0-23] integer
-	minutes: 39, // Default is 0 [0-59] integer
-	seconds: 0, // Default is 0 [0-59] integer
-	words: { //words displayed into the countdown
-		days: 'Día',
-		hours: 'Hora',
-		minutes: 'Minuto',
-		seconds: 'Segundo',
-		pluralLetter: 's'
-	},
-	plural: true, //use plurals
-	inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
-	inlineClass: 'simply-countdown-inline', //inline css span class in case of inline = true
-	// in case of inline set to false
-	enableUtc: true, //Use UTC as default
+	year: 2024, // año
+	month: 10, // mes (octubre)
+	day: 3, // día
+	hours: 0, // 12 AM (medianoche)
+	minutes: 1, // 0 minutos
+	seconds: 0, // 0 segundos
+	words: { // Palabras para el conteo
+        days: 'Día',
+        hours: 'Hora',
+        minutes: 'Minuto',
+        seconds: 'Segundo',
+        pluralLetter: 's'
+    },
+	plural: true, // usa plurales
+	inline: false, // establece en true para obtener un conteo en línea
+	inlineClass: 'simply-countdown-inline', // clase CSS para conteo en línea
+	enableUtc: false, // Cambiado a false para usar hora local
 	onEnd: function() {
 		document.getElementById('portada').classList.add('oculta');
-		return; 
-	}, //Callback on countdown end, put your own function here
-	refresh: 1000, // default refresh every 1s
-	sectionClass: 'simply-section', //section css class
-	amountClass: 'simply-amount', // amount css class
-	wordClass: 'simply-word', // word css class
+		// Puedes añadir aquí el mensaje de fin
+	}, // Callback al final de la cuenta regresiva
+	refresh: 1000, // refresco cada 1s
+	sectionClass: 'simply-section', // clase CSS de sección
+	amountClass: 'simply-amount', // clase CSS de cantidad
+	wordClass: 'simply-word', // clase CSS de palabra
 	zeroPad: false,
 	countUp: false
 });
